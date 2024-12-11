@@ -1,0 +1,21 @@
+1. Create a new directory in your local computer and open it in the python editor. 
+   Open the terminal and create the virtual environment in your directory: 
+     cd /path/to/your/directory
+     python -m venv myenv
+
+2. Now you should see some files called myenv, bin in your directory. Then download everything from the Github.
+
+3. Here is the Google Search Key we use: https://serpapi.com/search-api
+   Go to https://serpapi.com/ to sign in, then go to https://serpapi.com/manage-api-key to generate Google Search API key and add billing information
+
+4. Go to https://openai.com/index/openai-api to sign up, then go to https://platform.openai.com/api-keys to create OpenAI API key and add billing information
+
+5. Replace with your own API keys in api_keys.env
+
+6. Activate virtual environment: source myenv/bin/activate
+
+7. Install packages: pip install -r requirements.txt
+
+8. If step 5 doesn't work, then try line by line: pip install requests pip install beautifulsoup4 pip install openai pip install google-search-results pip install serpapi
+
+9. python main.py

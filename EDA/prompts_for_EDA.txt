@@ -1,0 +1,15 @@
+For df_short, there are actually duplicates from the dataset, WE NEED TO A LOT OF MANUAL CLEANINGS, do the following:
+Using arrests_total and arrestdate as primary key to drop/merge duplicates, create an unique dataset with only these columns:
+
+0. 'Source_Link',  'Source2_Link', 'Source3_Link' always kept and moved to front, , using only the first one you find, 'Source', 'Source2', 'Source3' dropped.
+1. 'arrestdate' kept, primary key
+2. 'date_start', 'date_end' kept, using only the first one you find
+3. 'CountyName', 'ST', kept and merge into a list of strings, drop duplicates of this list.
+4. 'arrests' dropped
+5. 'arrests_total' kept, primary key
+6. 'durationofraid' kept, using only the first one you find
+7. 'city', 'city2', 'city3', 'location' dropped
+8. target  (location targeted: 1=restaurant 2=mobile home park 3=courthouse 4=jail 5= county 6=city/town, 7= store/establishment 8=state 9=hotel 10=church 11=private home 12=agricultural business 13= hospital 14=work 15=nationwide) kept, and shortens the column name into `target`,  using only the first one you find, target reason kept, using only the first one you find
+9. 'previousconviction' kept, using only the first one you find
+10. 'female' kept, using only the first one you find
+11.  'nationality', 'FIPSState', 'FIPSCounty', kept and merge into a list of strings, drop duplicates of this list.
